@@ -1,0 +1,14 @@
+{
+    "Header": {
+        "brand": "Ladera del Mar",
+        "homepage": "test",
+        "support": "test"
+    },
+    "LangSwitcher": {
+        "locale": "{locale, select, en {English [EN]}, es {Espanol [ES]} other {Unknown}"
+    },
+    "Homepage": {
+        "title": "Wildflife Monitoring",
+        "description": "<break>test</break><break>Protecting and maintaining connectivity we allow the movement of wildlife throughout the project.</break><break>Through connectivity with wildlife canopy's and biological monitoring, we protect the wildlife that is mobilized by the development project, trying to provide a safe opportunity for passage and refuge for its natural dynamics.</break><break>Our objective is to seek a coexistence between the people who inhabit the project and the wildlife present. Avoiding negative interactions and adding suitable spaces for everyone.</break><break>Living in balance!</break>"
+    }
+}
