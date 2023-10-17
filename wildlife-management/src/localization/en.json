@@ -2,13 +2,45 @@
     "Header": {
         "brand": "Ladera del Mar",
         "homepage": "Homepage",
-        "support": "Support"
+        "support": "Support Us"
+    },
+    "Footer": {
+        "logo": {
+            "title": "Brand",
+            "description": "Wildflife Monitoring"
+        },
+        "site_map": {
+            "title": "Site Map",
+            "page1": "Homepage",
+            "page2": "Support Us"
+        },
+        "connect": {
+            "title": "Connect",
+            "email": "email@email.com"
+        }
     },
     "LangSwitcher": {
-        "locale": "{locale, select, en {English [EN]}, es {Espanol [ES]} other {Unknown}"
+        "locale": "{locale, select, en {English [EN]} es {Espanol [ES]} other {Unknown}}"
     },
     "Homepage": {
-        "title": "Wildflife Monitoring",
-        "description": "<break>Ladera del Mar is committed to maintaining monkey corridors</break><break>Protecting and maintaining connectivity we allow the movement of wildlife throughout the project.</break><break>Through connectivity with wildlife canopy's and biological monitoring, we protect the wildlife that is mobilized by the development project, trying to provide a safe opportunity for passage and refuge for its natural dynamics.</break><break>Our objective is to seek a coexistence between the people who inhabit the project and the wildlife present. Avoiding negative interactions and adding suitable spaces for everyone.</break><break>Living in balance!</break>"
+        "intro": {
+            "title": "Wildflife Monitoring",
+            "description": "<paragraph>Ladera del Mar is committed to maintaining monkey corridors</paragraph><paragraph>Protecting and maintaining connectivity we allow the movement of wildlife throughout the project.</paragraph><paragraph>Through connectivity with wildlife canopy's and biological monitoring, we protect the wildlife that is mobilized by the development project, trying to provide a safe opportunity for passage and refuge for its natural dynamics.</paragraph><paragraph>Our objective is to seek a coexistence between the people who inhabit the project and the wildlife present. Avoiding negative interactions and adding suitable spaces for everyone.</paragraph><paragraph>Living in balance!</paragraph>"
+        },
+        "impact": {
+            "title": "Our Impact",
+            "card1": {
+                "stat": "stat xx",
+                "text": "Text goes here"
+            }
+        },
+        "about": {
+            "title": "About us",
+            "Ines": {
+                "full_name": "Ines Azofeifa Rojas",
+                "position": "Position",
+                "description": "<paragraph>Master in Sustainable Development from the University of Costa Rica (2022) with an emphasis on biological resource conservation. She is a specialist in management and conservation of wild primates in urban and peri-urban areas of Costa Rica. She has extensive experience in managing conflicts between humans and non-human primates and evaluating the habitat of wild species in order to seek sustainable coexistence in time and space.</paragraph><paragraph>She has a degree in Ecotourism Management (2019) and a Bachelor's degree in Ecological Tourism (2017) with experience in the field of operation of the tourism industry and which has allowed her to understand the social processes linked to environmental changes in this matter, social, economic and political.</paragraph>"
+            }
+        }
     }
 }

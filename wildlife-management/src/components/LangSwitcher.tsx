@@ -13,11 +13,8 @@ export default function LangSwitcher({ languages }: { languages: string[] }) {
     const router = useRouter();
     const pathname = usePathname();
 
-    function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-        const nextLocale = event.target.value;
-        startTransition(() => {
-            router.replace(pathname, { locale: nextLocale });
-        });
+    function onSelectChange(locale: string) {
+        startTransition(() => { router.replace(pathname, { locale: locale }); });
     }
 
     return (
@@ -26,12 +23,16 @@ export default function LangSwitcher({ languages }: { languages: string[] }) {
                 {locale}
             </Menu.Button>
 
-            <Menu.Items className='bg-white flex flex-col p-1 absolute right-0 '>
-                {languages.map((cur: any) => (
-                    <Menu.Item as='button' className='py-2 px-3 m-auto bg-neutral-0 hover:bg-neutral-100 focus:outline-none active:bg-neutral-200 uppercase'>
-                        {t('locale', { locale: cur })}
-                    </Menu.Item>
-                ))}
+            <Menu.Items className='border-2 bg-white flex flex-col p-1 absolute right-0 '>
+                {languages.map((cur: any) => {
+                    return (
+                        <Menu.Item key={cur}
+                            as='button' onClick={() => { onSelectChange(cur) }}
+                            className='py-2 px-3 m-auto bg-neutral-0 hover:bg-neutral-100 focus:outline-none active:bg-neutral-200'>
+                            {t('locale', { locale: String(cur) })}
+                        </Menu.Item>
+                    )
+                })}
             </Menu.Items>
         </Menu>
         // <div px={2} py={1} border='2px' borderColor={'charcoal.500'} w='fit-content'>

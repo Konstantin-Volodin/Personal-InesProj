@@ -5,7 +5,7 @@
         "support": "test"
     },
     "LangSwitcher": {
-        "locale": "{locale, select, en {English [EN]}, es {Espanol [ES]} other {Unknown}"
+        "locale": "{locale, select, en {English [EN]} es {Espanol [ES]} other {Unknown}}"
     },
     "Homepage": {
         "title": "Wildflife Monitoring",

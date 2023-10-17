@@ -6,9 +6,7 @@ import PersonCard from 'components/PersonCard'
 import { useTranslations } from 'use-intl';
 
 export default function Homepage() {
-  const mt = useTranslations('Homepage')
-  console.log(mt('title'))
-  console.log(mt('description'))
+  const t = useTranslations('Homepage')
 
   return (
     <main>
@@ -16,9 +14,9 @@ export default function Homepage() {
       {/* INTRO */}
       <div className='h-[calc(100vh-80px)] bg-[url(/images/DSCN1285.JPG)] bg-no-repeat bg-cover bg-center bg-top bg-fixed'>
         <div className='h-full flex flex-col gap-y-12 justify-center px-36'>
-          <header className='font-bold tracking-[0.35em] text-4xl'>{mt('title')}</header>
+          <header className='font-bold tracking-[0.35em] text-4xl'>{t('intro.title')}</header>
           <div className='font-light tracking-tight text-lg flex flex-col gap-y-3'>
-            {mt.rich('description', { break: (chunks) => <span>{chunks}</span> })}
+            {t.rich('intro.description', { paragraph: (chunks) => <span>{chunks}</span> })}
           </div>
         </div >
       </div >
@@ -26,28 +24,26 @@ export default function Homepage() {
 
       {/* IMPACT */}
       <div className='h-screen flex flex-col gap-y-12 justify-center px-36 '>
-        <header className='font-bold tracking-[0.35em] text-4xl'>OUR IMPACT</header>
+        <header className='font-bold tracking-[0.35em] text-4xl uppercase'>{t('impact.title')}</header>
         <div className='flex flex-row gap-12'>
           <div className='w-[500px] h-[500px] bg-[url(/images/DSCN1522.JPG)] bg-no-repeat bg-cover bg-center bg-top'></div>
 
           <div className='basis-2/3 flex flex-row flex-wrap place-content-evenly gap-y-12'>
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
+            <StatsCard identifier={'card1'} />
+            <StatsCard identifier={'card2'} />
+            <StatsCard identifier={'card3'} />
+            <StatsCard identifier={'card4'} />
+            <StatsCard identifier={'card5'} />
           </div>
         </div>
-      </div >
+      </div>
 
       {/* ABOUT */}
       <div className='bg-gray-100 h-screen flex flex-col gap-y-12 justify-center px-36'>
-        <header className='font-bold tracking-[0.35em] text-4xl'>ABOUT US</header>
+        <header className='font-bold tracking-[0.35em] text-4xl capitalized'>{t("about.title")}</header>
 
         <div className='flex flex-row flex-wrap place-content-start gap-16'>
-          <PersonCard />
+          <PersonCard identifier={'Ines'} image={"/images/Ines.JPG"} />
         </div>
       </div >
 
