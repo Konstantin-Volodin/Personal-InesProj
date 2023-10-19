@@ -4,6 +4,8 @@ import Link from 'next/link'
 import StatsCard from 'components/StatsCard'
 import PersonCard from 'components/PersonCard'
 import { useTranslations } from 'use-intl';
+import HeaderText from 'components/HeaderText';
+import HeaderDescription from 'components/HeaderDescription';
 
 export default function Homepage() {
   const t = useTranslations('Homepage')
@@ -12,35 +14,53 @@ export default function Homepage() {
     <main>
 
       {/* INTRO */}
-      <div className='h-[calc(100vh-80px)] bg-[url(/images/DSCN1285.JPG)] bg-no-repeat bg-cover bg-center bg-top bg-fixed'>
-        <div className='h-full flex flex-col gap-y-12 justify-center px-36'>
-          <header className='font-bold tracking-[0.35em] text-4xl'>{t('intro.title')}</header>
-          <div className='font-light tracking-tight text-lg flex flex-col gap-y-3'>
-            {t.rich('intro.description', { paragraph: (chunks) => <span>{chunks}</span> })}
+      <div className='min-h-[calc(100vh-80px)] flex flex-row bg-[url(/images/DSCN1285.JPG)] bg-no-repeat bg-cover bg-center bg-top bg-fixed'>
+        <div className='w-full backdrop-blur flex place-items-center'>
+          <div className='flex flex-col gap-y-12
+            w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3 2xl:w-1/2
+            p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'
+          >
+            <HeaderText>{t('intro.title')}</HeaderText>
+            <HeaderDescription>
+              {t.rich('intro.description', { paragraph: (chunks) => <span>{chunks}</span> })}
+            </HeaderDescription>
           </div>
         </div >
-      </div >
+      </div>
 
 
       {/* IMPACT */}
-      <div className='h-screen flex flex-col gap-y-12 justify-center px-36 '>
-        <header className='font-bold tracking-[0.35em] text-4xl uppercase'>{t('impact.title')}</header>
-        <div className='flex flex-row gap-12'>
-          <div className='w-[500px] h-[500px] bg-[url(/images/DSCN1522.JPG)] bg-no-repeat bg-cover bg-center bg-top'></div>
+      <div className='h-full flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
+        <HeaderText>{t('impact.title')}</HeaderText>
 
-          <div className='basis-2/3 flex flex-row flex-wrap place-content-evenly gap-y-12'>
+        <div className='flex flex-row 
+          gap-8 sm:gap-8 md:gap-12 lg:gap-24 xl:gap-32 2xl:gap-32
+        '>
+          <div className='
+            bg-[url(/images/DSCN1522.JPG)] bg-no-repeat bg-cover bg-center bg-top
+            w-96 sm:w-96 md:w-96 lg:w-96 xl:w-96 2xl:w-[500px] 
+            h-96 sm:h-96 md:h-96 lg:h-96 xl:h-96 2xl:h-[500px] 
+            hidden sm:hidden md:hidden lg:block xl:block 2xl:block
+          '>
+
+          </div>
+
+          <div className='flex flex-row flex-wrap place-content-center gap-y-8 gap-x-12'>
             <StatsCard identifier={'card1'} />
             <StatsCard identifier={'card2'} />
             <StatsCard identifier={'card3'} />
             <StatsCard identifier={'card4'} />
             <StatsCard identifier={'card5'} />
+            <StatsCard identifier={'card6'} />
+            <StatsCard identifier={'card7'} />
+            <StatsCard identifier={'card8'} />
           </div>
         </div>
       </div>
 
       {/* ABOUT */}
-      <div className='bg-gray-100 h-screen flex flex-col gap-y-12 justify-center px-36'>
-        <header className='font-bold tracking-[0.35em] text-4xl capitalized'>{t("about.title")}</header>
+      <div className='h-full bg-gray-100 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
+        <HeaderText>{t("about.title")}</HeaderText>
 
         <div className='flex flex-row flex-wrap place-content-start gap-16'>
           <PersonCard identifier={'Ines'} image={"/images/Ines.JPG"} />
@@ -49,22 +69,16 @@ export default function Homepage() {
 
 
       {/* SUPPORT */}
-      <div className='h-screen flex flex-col gap-y-12 justify-center px-36'>
-        <header className='font-bold tracking-[0.35em] text-4xl'>SUPPORT US </header>
+      <div className='h-full flex flex-col gap-y-12 px-36 py-24'>
+        <HeaderText>{t('support.title')}</HeaderText>
 
         <div className='flex flex-row gap-12'>
-
-          <div className='basis-2/3 font-light tracking-tight text-lg flex flex-col gap-y-12 place-content-center'>
-            <span>
-              Etiam tempor arcu vitae lacus feugiat, ac dictum dolor mattis.
-              Nullam hendrerit consectetur libero sit amet dapibus. Quisque finibus velit at pharetra mollis.
-              Nam et ligula lobortis urna euismod egestas. Vestibulum ligula lorem, tempor et pulvinar ut, vulputate quis justo.
-              Praesent ut maximus nisi. Phasellus sodales egestas sem id aliquam. Integer ut lectus at tellus consequat posuere.
-            </span>
+          <HeaderDescription>
+            {t.rich('support.description', { paragraph: (chunks) => <span>{chunks}</span> })}
             <Link href='/support' className='py-6 px-24 mx-auto bg-green-700 hover:bg-green-800 focus:outline-none active:bg-green-900 text-white font-semibold tracking-widest'>DONATE</Link>
-          </div>
+          </HeaderDescription>
 
-          <div className='basis-1/3 h-96 bg-gray-100'></div>
+          <div className='basis-1/3 h-96 bg-[url(/images/DSCN9821.JPG)] bg-no-repeat bg-cover bg-center bg-top'></div>
         </div>
 
       </div>

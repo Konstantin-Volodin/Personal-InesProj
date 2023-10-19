@@ -1,65 +1,44 @@
-import Image from 'next/image'
+'use client';
+
 import Link from 'next/link'
 import StatsCard from 'components/StatsCard'
+import PersonCard from 'components/PersonCard'
+import { useTranslations } from 'use-intl';
+import HeaderText from 'components/HeaderText';
+import HeaderDescription from 'components/HeaderDescription';
 
-export default function Home() {
+export default function Homepage() {
+  const t = useTranslations('Homepage')
+
   return (
     <main>
 
-
       {/* INTRO */}
-      <div className='h-[calc(100vh-80px)] bg-green-200'>
-        <div className='h-full flex flex-col gap-y-12 justify-center px-36'>
-          <header className='font-bold tracking-[0.35em] text-4xl'>WILDLIFE MONITORING </header>
-          <div className='font-light tracking-tight text-xl flex flex-col gap-y-3'>
-            <span>Ladera del Mar is committed to maintaining monkey corridors.</span>
-            <span>Protecting and maintaining connectivity we allow the movement of wildlife throughout the project.</span>
-            <span>{"Through connectivity with wildlife canopy's and biological monitoring, we protect the wildlife that is mobilized by the development project, trying to provide a safe opportunity for passage and refuge for its natural dynamics."}</span>
-            <span>Our objective is to seek a coexistence between the people who inhabit the project and the wildlife present. Avoiding negative interactions and adding suitable spaces for everyone.</span>
-            <span>Living in balance!</span>
+      <div className='min-h-[calc(100vh-80px)] flex flex-row bg-[url(/images/DSCN9806.JPG)] bg-no-repeat bg-cover bg-center bg-top bg-fixed'>
+        <div className='w-full backdrop-blur flex place-items-center'>
+          <div className='flex flex-col gap-y-12
+            w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3 2xl:w-1/2
+            p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'
+          >
+            <HeaderText>Support Us</HeaderText>
+            <HeaderDescription>
+              You can support our project by donating to be able to maintain the operational costs of monitoring and field work. Any donation makes a difference!
+            </HeaderDescription>
           </div>
         </div >
-      </div >
+      </div>
 
 
-      {/* IMPACT */}
-      <div className='h-screen flex flex-col gap-y-12 justify-center px-36'>
-        <header className='font-bold tracking-[0.35em] text-4xl'>OUR IMPACT</header>
-        <div className='flex flex-row gap-12'>
-          <div className='basis-1/3 bg-gray-100'></div>
-
-          <div className='basis-2/3 flex flex-row flex-wrap place-content-evenly gap-y-12'>
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-            <StatsCard />
-          </div>
-        </div>
-      </div >
-
-      {/* ABOUT */}
-
-
-      {/* SUPPORT */}
-      <div className='h-screen bg-green-200 flex flex-col gap-y-12 justify-center px-36'>
-        <header className='font-bold tracking-[0.35em] text-4xl'>SUPPORT US </header>
+      {/* DONATE */}
+      <div className='h-full flex flex-col gap-y-12 px-36 py-24'>
+        <HeaderText>{t('support.title')}</HeaderText>
 
         <div className='flex flex-row gap-12'>
-
-          <div className='basis-2/3 font-light tracking-tight text-xl flex flex-col gap-y-12 place-content-center'>
-            <span>
-              Etiam tempor arcu vitae lacus feugiat, ac dictum dolor mattis.
-              Nullam hendrerit consectetur libero sit amet dapibus. Quisque finibus velit at pharetra mollis.
-              Nam et ligula lobortis urna euismod egestas. Vestibulum ligula lorem, tempor et pulvinar ut, vulputate quis justo.
-              Praesent ut maximus nisi. Phasellus sodales egestas sem id aliquam. Integer ut lectus at tellus consequat posuere.
-            </span>
-            <Link href='/support_us' className='py-6 px-24 mx-auto bg-green-700 hover:bg-green-800 focus:outline-none active:bg-green-900 text-white font-semibold tracking-widest'>DONATE</Link>
+          <div className='basis-2/3 h-96 bg-red-100 '>
+            PAYPAL API GOES HERE
           </div>
 
-          <div className='basis-1/3 h-96 bg-gray-100'></div>
+          <div className='basis-1/3 h-96 bg-[url(/images/DSCN9821.JPG)] bg-no-repeat bg-cover bg-center bg-top'></div>
         </div>
 
       </div>

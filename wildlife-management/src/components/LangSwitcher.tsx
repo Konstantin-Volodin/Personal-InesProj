@@ -18,12 +18,12 @@ export default function LangSwitcher({ languages }: { languages: string[] }) {
     }
 
     return (
-        <Menu as='div' className='relative'>
-            <Menu.Button className='py-2 px-3 m-auto bg-green-300 hover:bg-green-400 focus:outline-none active:bg-green-500 uppercase'>
+        <Menu as='div' className='relative z-10 w-24'>
+            <Menu.Button className='w-24 py-2 px-3 m-auto bg-green-300 hover:bg-green-400 focus:outline-none active:bg-green-500 uppercase'>
                 {locale}
             </Menu.Button>
 
-            <Menu.Items className='border-2 bg-white flex flex-col p-1 absolute right-0 '>
+            <Menu.Items className='border-2 bg-white flex flex-col p-1 absolute right-0'>
                 {languages.map((cur: any) => {
                     return (
                         <Menu.Item key={cur}
@@ -35,22 +35,5 @@ export default function LangSwitcher({ languages }: { languages: string[] }) {
                 })}
             </Menu.Items>
         </Menu>
-        // <div px={2} py={1} border='2px' borderColor={'charcoal.500'} w='fit-content'>
-        //     <Menu>
-        //         <MenuButton display={'inline-block'}>
-        //             <StandardLink isexternal={false}>
-        //                 <HStack><BiWorld /><Text display='inline'>{lang}</Text></HStack>
-        //             </StandardLink>
-        //         </MenuButton>
-
-        //         <MenuList p={2} borderRadius={0}>
-        //             {lang_options.map((key: string) => (
-        //                 <MenuItem key={key} onClick={() => setLang(key)}>
-        //                     <StandardLink isexternal={false}>{header.lang[key]}</StandardLink>
-        //                 </MenuItem>
-        //             ))}
-        //         </MenuList>
-        //     </Menu>
-        // </div >
     );
 }
