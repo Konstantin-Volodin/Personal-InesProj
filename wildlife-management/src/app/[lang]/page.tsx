@@ -14,7 +14,7 @@ export default function Homepage() {
     <main>
 
       {/* INTRO */}
-      <div className='min-h-[calc(100vh-80px)] flex flex-row bg-[url(/images/DSCN1285.JPG)] bg-no-repeat bg-cover bg-center bg-top bg-fixed'>
+      <div className='min-h-[calc(100vh-80px)] flex flex-row bg-[url(/images/326496248_5401809366591635_6734550174955137256_n.JPG)] bg-no-repeat bg-cover bg-center bg-top bg-fixed'>
         <div className='w-full backdrop-blur flex place-items-center'>
           <div className='flex flex-col gap-y-12
             w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3 2xl:w-1/2
@@ -34,9 +34,9 @@ export default function Homepage() {
         <HeaderText>{t('impact.title')}</HeaderText>
 
         <div className='flex flex-row 
-          gap-8 sm:gap-8 md:gap-12 lg:gap-24 xl:gap-32 2xl:gap-32
+          gap-8 sm:gap-8 md:gap-12 lg:gap-12 xl:gap-12 2xl:gap-12
         '>
-          <div className='
+          <div className='grow
             bg-[url(/images/DSCN1522.JPG)] bg-no-repeat bg-cover bg-center bg-top
             w-96 sm:w-96 md:w-96 lg:w-96 xl:w-96 2xl:w-[500px] 
             h-96 sm:h-96 md:h-96 lg:h-96 xl:h-96 2xl:h-[500px] 
@@ -75,7 +75,7 @@ export default function Homepage() {
         <div className='flex flex-row gap-12'>
           <HeaderDescription>
             {t.rich('support.description', { paragraph: (chunks) => <span>{chunks}</span> })}
-            <Link href='/support' className='py-6 px-24 mx-auto bg-green-700 hover:bg-green-800 focus:outline-none active:bg-green-900 text-white font-semibold tracking-widest'>DONATE</Link>
+            <Link href='/support' className='py-6 px-24 mx-auto bg-green-700 hover:bg-green-800 focus:outline-none active:bg-green-900 text-white font-semibold tracking-widest'>SUPPORT</Link>
           </HeaderDescription>
 
           <div className='basis-1/3 h-96 bg-[url(/images/DSCN9821.JPG)] bg-no-repeat bg-cover bg-center bg-top'></div>

@@ -1,14 +1,78 @@
 {
     "Header": {
         "brand": "Ladera del Mar",
-        "homepage": "test",
-        "support": "test"
+        "homepage": "[TO TRANSLATE]",
+        "support": "[TO TRANSLATE]"
+    },
+    "Footer": {
+        "logo": {
+            "title": "[TO TRANSLATE]",
+            "description": "[TO TRANSLATE]"
+        },
+        "site_map": {
+            "title": "[TO TRANSLATE]",
+            "page1": "[TO TRANSLATE]",
+            "page2": "[TO TRANSLATE]"
+        },
+        "connect": {
+            "title": "[TO TRANSLATE]",
+            "email": "email@email.com"
+        }
     },
     "LangSwitcher": {
         "locale": "{locale, select, en {English [EN]} es {Espanol [ES]} other {Unknown}}"
     },
     "Homepage": {
-        "title": "Wildflife Monitoring",
-        "description": "<break>test</break><break>Protecting and maintaining connectivity we allow the movement of wildlife throughout the project.</break><break>Through connectivity with wildlife canopy's and biological monitoring, we protect the wildlife that is mobilized by the development project, trying to provide a safe opportunity for passage and refuge for its natural dynamics.</break><break>Our objective is to seek a coexistence between the people who inhabit the project and the wildlife present. Avoiding negative interactions and adding suitable spaces for everyone.</break><break>Living in balance!</break>"
+        "intro": {
+            "title": "[TO TRANSLATE]",
+            "description": "<paragraph>Ladera del Mar apuesta por mantener corredores de monos y vida silvestre presente.</paragraph><paragraph>Protegiendo y manteniendo la conectividad permitimos el movimiento de vida silvestre durante todo el proyecto. Tenemos aproximadamente dos años de trabajar en crear un desarrollo sostenible.</paragraph><paragraph>A través de la conectividad con el dosel de vida silvestre y el monitoreo biológico, protegemos la vida silvestre que es movilizada por el proyecto de desarrollo, tratando de brindar una oportunidad segura de paso y refugio para su dinámica natural. Al mismo tiempo que se zonifica las áreas que son para desarrollo habitacional para personas.</paragraph><paragraph>Nuestro objetivo es buscar una coexistencia entre las personas que habitan el proyecto y la vida silvestre presente. Evitando interacciones negativas y añadiendo espacios adecuados para todos.</paragraph><paragraph>¡Vivir en equilibrio!</paragraph>"
+        },
+        "impact": {
+            "title": "Our Impact",
+            "card1": {
+                "stat": "stat xx",
+                "text": "Howler Monkey Population"
+            },
+            "card2": {
+                "stat": "stat xx",
+                "text": "Canopy Bridges"
+            },
+            "card3": {
+                "stat": "stat xx",
+                "text": "Wildlife Species"
+            },
+            "card4": {
+                "stat": "stat xx",
+                "text": "Nursery Trees"
+            },
+            "card5": {
+                "stat": "stat xx",
+                "text": "Urban Coverage"
+            },
+            "card6": {
+                "stat": "stat xx",
+                "text": "Forest Coverage"
+            },
+            "card7": {
+                "stat": "stat xx",
+                "text": "Land Coverage"
+            },
+            "card8": {
+                "stat": "stat xx",
+                "text": "Underground Cable"
+            }
+        },
+        "about": {
+            "title": "[TO TRANSLATE]",
+            "Ines": {
+                "full_name": "Ines Azofeifa Rojas",
+                "position": "[TO TRANSLATE]",
+                "description": "<paragraph>Máster en Desarrollo Sostenible por la Universidad de Costa Rica (2022) con énfasis en conservación del recurso biológico. Especialista en manejo y conservación de primates silvestres en áreas urbanas y periurbanas de Costa Rica. Con amplia experiencia en el manejo de conflictos entre seres humanos y primates no humanos y evaluación de hábitat de las especies silvestres con el fin de buscar una convivencia desde los sostenible en el tiempo y en el espacio.</paragraph><paragraph>Licenciada en Gestión Ecoturística (2019) y Bachiller en Turismo Ecológico (2017) con experiencia en el campo de operación de la industria turística y que le ha permitido entender los procesos sociales ligados a cambios ambientales en esta materia, social, económica y política.</paragraph>"
+            }
+        },
+        "support": {
+            "title": "[TO TRANSLATE]",
+            "description": "<paragraph>Usted puede apoyar nuestro proyecto donando para poder mantener los costos operativos de monitoreo y el trabajo de campo. Cualquier donación marca la diferencia.</paragraph>"
+        }
     }
 }
