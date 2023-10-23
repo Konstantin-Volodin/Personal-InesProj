@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && firebase deploy --only hosting"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "firebase": "^10.5.0",
+    "isomorphic-dompurify": "^1.9.0",
     "next": "13.5.4",
-    "next-intl": "^2.20.2",
     "react": "^18",
     "react-dom": "^18"
   },

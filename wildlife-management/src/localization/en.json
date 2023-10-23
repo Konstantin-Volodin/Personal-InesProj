@@ -25,7 +25,7 @@
     "Homepage": {
         "intro": {
             "title": "Wildflife Monitoring",
-            "description": "<paragraph>Ladera del Mar is committed to maintaining monkey corridors</paragraph><paragraph>Protecting and maintaining connectivity we allow the movement of wildlife throughout the project.</paragraph><paragraph>Through connectivity with wildlife canopy's and biological monitoring, we protect the wildlife that is mobilized by the development project, trying to provide a safe opportunity for passage and refuge for its natural dynamics.</paragraph><paragraph>Our objective is to seek a coexistence between the people who inhabit the project and the wildlife present. Avoiding negative interactions and adding suitable spaces for everyone.</paragraph><paragraph>Living in balance!</paragraph>"
+            "description": "<p>Ladera del Mar is committed to maintaining monkey corridors</p><p>Protecting and maintaining connectivity we allow the movement of wildlife throughout the project.</p><p>Through connectivity with wildlife canopy's and biological monitoring, we protect the wildlife that is mobilized by the development project, trying to provide a safe opportunity for passage and refuge for its natural dynamics.</p><p>Our objective is to seek a coexistence between the people who inhabit the project and the wildlife present. Avoiding negative interactions and adding suitable spaces for everyone.</p><p>Living in balance!</p>"
         },
         "impact": {
             "title": "Our Impact",
@@ -67,12 +67,12 @@
             "Ines": {
                 "full_name": "Ines Azofeifa Rojas",
                 "position": "Research",
-                "description": "<paragraph>Master in Sustainable Development from the University of Costa Rica (2022) with an emphasis on biological resource conservation. She is a specialist in management and conservation of wild primates in urban and peri-urban areas of Costa Rica. She has extensive experience in managing conflicts between humans and non-human primates and evaluating the habitat of wild species in order to seek sustainable coexistence in time and space.</paragraph><paragraph>She has a degree in Ecotourism Management (2019) and a Bachelor's degree in Ecological Tourism (2017) with experience in the field of operation of the tourism industry and which has allowed her to understand the social processes linked to environmental changes in this matter, social, economic and political.</paragraph>"
+                "description": "<p>Master in Sustainable Development from the University of Costa Rica (2022) with an emphasis on biological resource conservation. She is a specialist in management and conservation of wild primates in urban and peri-urban areas of Costa Rica. She has extensive experience in managing conflicts between humans and non-human primates and evaluating the habitat of wild species in order to seek sustainable coexistence in time and space.</p><p>She has a degree in Ecotourism Management (2019) and a Bachelor's degree in Ecological Tourism (2017) with experience in the field of operation of the tourism industry and which has allowed her to understand the social processes linked to environmental changes in this matter, social, economic and political.</p>"
             }
         },
         "support": {
             "title": "Support Us",
-            "description": "<paragraph>You can support our project by donating to be able to maintain the operational costs of monitoring and field work. Any donation makes a difference.</paragraph>"
+            "description": "<p>You can support our project by donating to be able to maintain the operational costs of monitoring and field work. Any donation makes a difference.</p>"
         }
     }
 }

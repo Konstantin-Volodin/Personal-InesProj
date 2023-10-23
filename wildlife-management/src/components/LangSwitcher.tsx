@@ -1,20 +1,22 @@
 'use client';
 
-import { useLocale, useTranslations } from 'next-intl';
-import { usePathname, useRouter } from 'next-intl/client';
-import { ChangeEvent, useTransition } from 'react';
+import { useContext, useTransition } from 'react';
 import { Menu } from "@headlessui/react"
+import { CMSContext } from 'app/structureProvider';
+import { useRouter, usePathname } from 'next/navigation';
 
-export default function LangSwitcher({ languages }: { languages: string[] }) {
+export default function LangSwitcher() {
 
-    const t = useTranslations('LangSwitcher');
-    const [isPending, startTransition] = useTransition();
-    const locale = useLocale();
-    const router = useRouter();
-    const pathname = usePathname();
+    const { locale, languages, raw, done } = useContext(CMSContext)
+    const [isPending, startTransition] = useTransition()
+    const router = useRouter()
+    let pathName = usePathname()
 
-    function onSelectChange(locale: string) {
-        startTransition(() => { router.replace(pathname, { locale: locale }); });
+    function onSelectChange(new_locale: string) {
+        startTransition(() => {
+            pathName = pathName.replace("/" + locale + "/", "/" + new_locale + "/")
+            router.push(pathName);
+        });
     }
 
     return (
@@ -29,7 +31,7 @@ export default function LangSwitcher({ languages }: { languages: string[] }) {
                         <Menu.Item key={cur}
                             as='button' onClick={() => { onSelectChange(cur) }}
                             className='py-2 px-3 m-auto bg-neutral-0 hover:bg-neutral-100 focus:outline-none active:bg-neutral-200'>
-                            {t('locale', { locale: String(cur) })}
+                            {done && raw.LangSwitcher[cur]}
                         </Menu.Item>
                     )
                 })}

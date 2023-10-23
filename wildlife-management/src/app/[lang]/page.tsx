@@ -1,14 +1,16 @@
 'use client';
 
+import { useContext } from 'react';
 import Link from 'next/link'
+import DOMPurify from 'isomorphic-dompurify';
+
+import { CMSContext } from 'app/structureProvider';
 import StatsCard from 'components/StatsCard'
 import PersonCard from 'components/PersonCard'
-import { useTranslations } from 'use-intl';
 import HeaderText from 'components/HeaderText';
-import HeaderDescription from 'components/HeaderDescription';
 
 export default function Homepage() {
-  const t = useTranslations('Homepage')
+  const { locale, raw, done } = useContext(CMSContext);
 
   return (
     <main>
@@ -20,10 +22,9 @@ export default function Homepage() {
             w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3 2xl:w-1/2
             p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'
           >
-            <HeaderText>{t('intro.title')}</HeaderText>
-            <HeaderDescription>
-              {t.rich('intro.description', { paragraph: (chunks) => <span>{chunks}</span> })}
-            </HeaderDescription>
+            <HeaderText>{raw.Homepage.intro.title}</HeaderText>
+            <div className='w-full flex flex-col gap-y-6 font-light tracking-tight text-sm sm:text-sm md:text-base lg:text-lg 2xl:text-xl'
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(raw.Homepage.intro.description) }} />
           </div>
         </div >
       </div>
@@ -31,7 +32,7 @@ export default function Homepage() {
 
       {/* IMPACT */}
       <div className='h-full flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
-        <HeaderText>{t('impact.title')}</HeaderText>
+        <HeaderText>{raw.Homepage.impact.title}</HeaderText>
 
         <div className='flex flex-row 
           gap-8 sm:gap-8 md:gap-12 lg:gap-12 xl:gap-12 2xl:gap-12
@@ -46,30 +47,30 @@ export default function Homepage() {
           </div>
 
           <div className='flex flex-row flex-wrap place-content-center gap-y-8 gap-x-12'>
-            <StatsCard identifier={'card1'} />
+            {/* <StatsCard identifier={'card1'} />
             <StatsCard identifier={'card2'} />
             <StatsCard identifier={'card3'} />
             <StatsCard identifier={'card4'} />
             <StatsCard identifier={'card5'} />
             <StatsCard identifier={'card6'} />
             <StatsCard identifier={'card7'} />
-            <StatsCard identifier={'card8'} />
+            <StatsCard identifier={'card8'} /> */}
           </div>
         </div>
       </div>
 
       {/* ABOUT */}
-      <div className='h-full bg-gray-100 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
+      {/* <div className='h-full bg-gray-100 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
         <HeaderText>{t("about.title")}</HeaderText>
 
         <div className='flex flex-row flex-wrap place-content-start gap-16'>
           <PersonCard identifier={'Ines'} image={"/images/Ines.JPG"} />
         </div>
-      </div >
+      </div > */}
 
 
       {/* SUPPORT */}
-      <div className='h-full flex flex-col gap-y-12 px-36 py-24'>
+      {/* <div className='h-full flex flex-col gap-y-12 px-36 py-24'>
         <HeaderText>{t('support.title')}</HeaderText>
 
         <div className='flex flex-row gap-12'>
@@ -81,7 +82,7 @@ export default function Homepage() {
           <div className='basis-1/3 h-96 bg-[url(/images/DSCN9821.JPG)] bg-no-repeat bg-cover bg-center bg-top'></div>
         </div>
 
-      </div>
+      </div> */}
     </main >
   )
 }
