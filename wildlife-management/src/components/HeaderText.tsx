@@ -1,10 +1,6 @@
 'use client';
 
-import Link from 'next/link'
 import { ReactNode } from 'react';
-import { useTranslations } from 'use-intl';
-
-
 interface Props { children: ReactNode }
 export default function HeaderText(props: Props) {
     return (
