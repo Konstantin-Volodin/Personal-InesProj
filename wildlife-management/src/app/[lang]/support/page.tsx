@@ -64,7 +64,6 @@ export default function Homepage() {
       )}
 
       {/* DONATE */}
-
       {pageDone && (
         <div className='h-full flex flex-col gap-y-12 px-36 py-24'>
           {/* <HeaderText>{t('support.title')}</HeaderText> */}
