@@ -47,16 +47,14 @@ export default function Homepage() {
           <div className='backdrop-blur'>
 
             {/* MAIN SECTION */}
-            <div className='w-full min-h-screen'>
-              <div className='flex place-items-center'>
-                <div className='flex flex-col gap-y-12 
+            <div className='w-full min-h-screen flex place-items-center'>
+              <div className='flex flex-col gap-y-12 
                   w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3 2xl:w-1/2
                   p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'
-                >
-                  <HeaderText>{raw.Homepage.intro.title}</HeaderText>
-                  <div className='w-full flex flex-col gap-y-6 font-light tracking-tight text-sm sm:text-sm md:text-base lg:text-lg 2xl:text-xl'
-                    dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(raw.Homepage.intro.description) }} />
-                </div>
+              >
+                <HeaderText>{raw.Homepage.intro.title}</HeaderText>
+                <div className='w-full flex flex-col gap-y-6 font-light tracking-tight text-sm sm:text-sm md:text-base lg:text-lg 2xl:text-xl'
+                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(raw.Homepage.intro.description) }} />
               </div>
             </div>
 
@@ -76,9 +74,7 @@ export default function Homepage() {
         < div className='h-full bg-slate-50 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
           <HeaderText>{raw.Homepage.impact.title}</HeaderText>
 
-          <div className='flex flex-row
-          gap-8 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24 2xl:gap-32
-          '>
+          <div className='flex flex-row gap-8 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24 2xl:gap-32'>
 
             {/* IMAGE ON THE SIDE */}
             <div className='bg-no-repeat bg-cover bg-center bg-top rounded-full border-4 border-slate-700 drop-shadow-2xl hidden sm:hidden md:hidden lg:block xl:block 2xl:block'
@@ -130,12 +126,11 @@ export default function Homepage() {
 
 
       {/* SUPPORT */}
-
       {pageDone && (
         <div className='h-full bg-slate-50 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
           <HeaderText>{raw.Homepage.support.title}</HeaderText>
 
-          <div className='flex flex-row
+          <div className='flex flex-row justify-between
           gap-8 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24 2xl:gap-32
           '>
 

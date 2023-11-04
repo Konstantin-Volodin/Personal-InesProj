@@ -5,6 +5,11 @@ import { getDoc, doc } from "firebase/firestore";
 import { db } from "firebaseConfig";
 
 // LAYOUT OBJECT STRUCTURE
+export interface socialMedia {
+    type: string,
+    href: string
+}
+
 export interface layout {
     Homepage: {
         images: { home: string, support: string, impact: string },
@@ -13,10 +18,14 @@ export interface layout {
     },
     Support: {
         images: { home: string, support: string }
+    },
+    Footer: {
+        email: string,
+        links: socialMedia[]
     }
 }
 
-const defaultLayout = {
+const defaultLayout: layout = {
     Homepage: {
         PersonCards: [],
         StatsCards: [],
@@ -24,6 +33,12 @@ const defaultLayout = {
     },
     Support: {
         images: { home: "", support: "" }
+    },
+    Footer: {
+        email: "",
+        links: [
+            { type: 'instagram', href: '' }
+        ]
     }
 }
 
