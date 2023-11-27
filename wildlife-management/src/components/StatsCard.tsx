@@ -17,22 +17,24 @@ export default function StatsCard(props: Props) {
             const imageRef = ref(storageRef, raw.Homepage.impact.cards[props.identifier].img)
             getDownloadURL(imageRef).then(url => SetImg(url))
         }
-        fetchImage().then(() => { console.log(img) })
+        fetchImage()
     }, [])
 
     return (
-        <div className='flex flex-col p-2 drop-shadow-xl'>
-            <div className='w-48 h-48 border-2 border-slate-700 mb-2 bg-no-repeat bg-cover bg-center bg-top'
+        <div className='w-36 flex flex-col drop-shadow-xl place-items-center'>
+
+            <div className='w-full h-36 border-4 border-slate-700 mb-1 bg-no-repeat bg-cover bg-center bg-top'
                 style={{ backgroundImage: 'url(' + img + ')' }}
             />
-            <div className='flex flex-col'>
-                <span className='w-48 text-center font-light text-sm sm:text-sm md:text-md lg:text-lg 2xl:text-xl'>
-                    {raw.Homepage.impact.cards[props.identifier].stat}
-                </span>
-                <span className='w-48 text-center font-medium text-sm sm:text-sm md:text-sm lg:text-md 2xl:text-lg uppercase tracking-wider'>
-                    {raw.Homepage.impact.cards[props.identifier].text}
-                </span>
-            </div>
+
+            <span className='w-full text-center font-light text-lg sm:text-lg md:text-lg lg:text-xl 2xl:text-2xl'>
+                {raw.Homepage.impact.cards[props.identifier].stat}
+            </span>
+
+            <span className='w-full text-center font-medium text-sm sm:text-sm md:text-sm lg:text-md 2xl:text-md uppercase tracking-wider'>
+                {raw.Homepage.impact.cards[props.identifier].text}
+            </span>
+
         </div>
     )
 }

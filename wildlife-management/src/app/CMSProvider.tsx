@@ -14,13 +14,15 @@ export interface layout {
     Homepage: {
         images: { home: string, support: string, impact: string },
         PersonCards: string[],
-        StatsCards: string[]
+        StatsCards: string[],
+        ProjectCards: string[]
     },
     Support: {
         images: { home: string, support: string }
     },
     Footer: {
         email: string,
+        phone: string,
         links: socialMedia[]
     }
 }
@@ -29,6 +31,7 @@ const defaultLayout: layout = {
     Homepage: {
         PersonCards: [],
         StatsCards: [],
+        ProjectCards: [],
         images: { home: "", support: "", impact: "" }
     },
     Support: {
@@ -36,6 +39,7 @@ const defaultLayout: layout = {
     },
     Footer: {
         email: "",
+        phone: "",
         links: [
             { type: 'instagram', href: '' }
         ]
@@ -57,13 +61,14 @@ export interface translation {
     Footer: {
         logo: { title: string, description: string },
         site_map: { title: string, pages: pageLink[] },
-        connect: { title: string, email: string }
+        connect: { title: string }
     },
     Homepage: {
         intro: { title: string, description: string },
         impact: { title: string, cards: { [identifier: string]: statCard } },
         about: { title: string, cards: { [identifier: string]: personCard } },
-        support: { title: string, description: string }
+        projects: { title: string, cards: { [identifier: string]: projectCard } },
+        support: { title: string, description: string, button: string }
     },
     Support: {
         intro: { title: string, description: string },
@@ -81,7 +86,15 @@ export interface personCard {
     full_name: string,
     position: string,
     description: string,
-    img: string
+    img: string,
+    link: string
+}
+
+export interface projectCard {
+    name: string,
+    description: string,
+    img: string,
+    link: string
 }
 
 export interface pageLink {
@@ -104,13 +117,14 @@ const defaultTranslations: translation = {
                 { description: "support", link: "/support/" }
             ]
         },
-        connect: { title: 'title', email: 'email' }
+        connect: { title: 'title' }
     },
     Homepage: {
         intro: { title: 'title', description: 'description' },
         impact: { title: 'title', cards: {} },
         about: { title: 'title', cards: {} },
-        support: { title: 'title', description: 'description' }
+        projects: { title: 'title', cards: {} },
+        support: { title: 'title', description: 'description', button: 'button' }
     },
     Support: {
         intro: { title: "title", description: "description" },

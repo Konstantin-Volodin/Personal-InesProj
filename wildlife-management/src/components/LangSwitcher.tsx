@@ -21,16 +21,16 @@ export default function LangSwitcher() {
 
     return (
         <Menu as='div' className='relative z-10'>
-            <Menu.Button className='w-20 py-2 px-3 m-auto bg-green-300 hover:bg-green-400 focus:outline-none active:bg-green-500 uppercase'>
+            <Menu.Button className='hover:scale-110 w-20 py-2 px-3 m-auto bg-green-300 hover:bg-green-400 outline-none active:bg-green-500 uppercase transition-all'>
                 {locale}
             </Menu.Button>
 
-            <Menu.Items className='border-slate-800 border-2 bg-slate-50 flex flex-col p-1 absolute right-0'>
+            <Menu.Items className='border-slate-800 border-2 bg-slate-50 flex flex-col p-2 absolute right-0 transition-all'>
                 {langs.list.map((cur: any) => {
                     return (
                         <Menu.Item key={cur}
                             as='button' onClick={() => { onSelectChange(cur) }}
-                            className='py-2 px-4 m-auto bg-neutral-0 hover:bg-neutral-100 focus:outline-none active:bg-neutral-200'>
+                            className='hover:scale-110 py-2 px-4 m-auto outline-none bg-slate-0 hover:bg-slate-200 active:bg-slate-300 transition-all'>
                             {done && langs.translation[cur]}
                         </Menu.Item>
                     )
