@@ -25,11 +25,13 @@ export default function PersonCard(props: Props) {
         <div className='flex flex-col sm:flex-row md:flew-row lg:flex-row xl:flex-row 2xl:flex-row place-items-center bg-slate-50 gap-6 p-6 drop-shadow-lg border-slate-700'>
 
             {/* IMAGE */}
-            <div className='flex flex-col place-items-center gap-y-2'>
-                <div className='w-60 h-60 md:w-96 sm:h-96 bg-no-repeat bg-cover bg-center bg-top rounded-full border-slate-700 border-2'
+            <div className='flex flex-col place-items-center gap-y-2 w-full'>
+                <div className='aspect-square  
+                    w-48 h-48 sm:w-60 sm:h-60 md:w-78 md:h-78 lg:w-96 lg:h-96
+                    bg-no-repeat bg-cover bg-center bg-top rounded-full border-slate-700 border-2'
                     style={{ backgroundImage: 'url(' + img + ')' }}
                 />
-                <div className='flex flex-col place-items-center'>
+                <div className='flex flex-col place-items-center w-full'>
                     <span className='font-medium tracking-wider text-md sm:text-md md:text-lg lg:text-xl 2xl:text-2xl'>
                         {raw.Homepage.about.cards[props.identifier].full_name}
                     </span>

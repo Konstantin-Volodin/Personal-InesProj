@@ -51,7 +51,7 @@ export default function Homepage() {
             <div className='w-full min-h-screen flex place-items-center'>
               <div className='flex flex-col gap-y-12 text-stone-200
                   w-full sm:w-full md:w-full lg:w-2/3 xl:w-2/3 2xl:w-1/2
-                  p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'
+                  p-4 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'
               >
                 <HeaderText>{raw.Homepage.intro.title}</HeaderText>
                 <div className='w-full flex flex-col gap-y-6 font-light cp tracking-tight text-sm sm:text-sm md:text-base lg:text-lg 2xl:text-xl'
@@ -70,7 +70,7 @@ export default function Homepage() {
 
       {/* IMPACT */}
       {pageDone && (
-        < div className='h-full bg-slate-50 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
+        < div className='h-full bg-slate-50 flex flex-col gap-y-12 p-4 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
           <HeaderText>{raw.Homepage.impact.title}</HeaderText>
 
           <div className='flex flex-row gap-8 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24 2xl:gap-32 place-items-center'>
@@ -89,7 +89,9 @@ export default function Homepage() {
 
             {/* CARDS */}
             <div className='
-              w-full h-min p-4 gap-x-8 gap-y-12 place-content-center
+              w-full h-min place-content-center
+              p-2 sm:p-4
+              gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-12
               flex flex-wrap 
               lg:grid lg:grid-cols-3 
               xl:grid xl:grid-cols-3 
@@ -111,10 +113,12 @@ export default function Homepage() {
 
       {/* ABOUT US*/}
       {pageDone && (
-        <div className='h-full bg-slate-300 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
+        <div className='h-full bg-slate-300 flex flex-col gap-y-12 p-4 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
           <HeaderText>{raw.Homepage.about.title}</HeaderText>
 
-          <div className='flex flex-row flex-wrap place-content-start gap-16 p-6'>
+          <div className='
+            flex flex-row flex-wrap place-content-start 
+            p-2 sm:p-4 gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-12'>
             {layout.Homepage.PersonCards.map((ident: string) => {
               return (<PersonCard key={ident} identifier={ident} />)
             })}
@@ -131,10 +135,12 @@ export default function Homepage() {
 
       {/* OUR PROJECTS*/}
       {pageDone && (
-        <div className='h-full bg-slate-50 flex flex-col gap-y-12 p-8 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
+        <div className='h-full bg-slate-50 flex flex-col gap-y-12 p-4 sm:p-8 md:p-12 lg:p-24 xl:p-32 2xl:p-32'>
           <HeaderText>{raw.Homepage.projects.title}</HeaderText>
 
-          <div className='flex flex-row flex-wrap place-content-start gap-16 p-6'>
+          <div className='
+            flex flex-row flex-wrap place-content-start 
+            p-2 sm:p-4 gap-x-6 gap-y-8 sm:gap-x-8 sm:gap-y-12'>
             {layout.Homepage.ProjectCards.map((ident: string) => {
               return (<ProjectCard key={ident} identifier={ident} />)
             })}
