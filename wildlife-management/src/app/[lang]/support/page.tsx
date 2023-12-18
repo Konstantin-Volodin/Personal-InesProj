@@ -76,7 +76,11 @@ export default function Homepage() {
             <div className='w-full h-96 flex place-items-center'>
 
               <Link href={"https://www.paypal.com/donate/?hosted_button_id=DLTFJNJ3T2ZFN"} target='_blank'
-                className='hover:scale-110 transition-all  px-28 py-10 text-4xl text-slate-50 mx-auto my-0 bg-green-700 hover:bg-green-800 focus:outline-none active:bg-green-900 uppercase'
+                className='text-slate-50 mx-auto my-0 bg-green-700  outline-none  uppercase text-center
+                  hover:scale-110 transition-all hover:bg-green-800 active:bg-green-900 
+                  text-xl sm:text-2xl md:text-4xl
+                  w-full sm:w-fit
+                  px-16 py-8 sm:px-48 sm:py-8'
               >{raw.Homepage.support.button}
               </Link>
             </div>

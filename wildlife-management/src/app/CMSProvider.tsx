@@ -17,14 +17,9 @@ export interface layout {
         StatsCards: string[],
         ProjectCards: string[]
     },
-    Support: {
-        images: { home: string, support: string }
-    },
-    Footer: {
-        email: string,
-        phone: string,
-        links: socialMedia[]
-    }
+    BrandImage: string,
+    Support: { images: { home: string, support: string } },
+    Footer: { email: string, phone: string, links: socialMedia[] }
 }
 
 const defaultLayout: layout = {
@@ -34,16 +29,9 @@ const defaultLayout: layout = {
         ProjectCards: [],
         images: { home: "", support: "", impact: "" }
     },
-    Support: {
-        images: { home: "", support: "" }
-    },
-    Footer: {
-        email: "",
-        phone: "",
-        links: [
-            { type: 'instagram', href: '' }
-        ]
-    }
+    BrandImage: "",
+    Support: { images: { home: "", support: "" } },
+    Footer: { email: "", phone: "", links: [{ type: 'instagram', href: '' }] }
 }
 
 // TRANSLATION OBJECT STRUCTURE

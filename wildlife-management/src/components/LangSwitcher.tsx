@@ -20,7 +20,7 @@ export default function LangSwitcher() {
     }
 
     return (
-        <Menu as='div' className='relative z-10'>
+        <Menu as='div' className='relative z-50 '>
             <Menu.Button className='hover:scale-110 w-20 py-2 px-3 m-auto bg-green-300 hover:bg-green-400 outline-none active:bg-green-500 uppercase transition-all'>
                 {locale}
             </Menu.Button>

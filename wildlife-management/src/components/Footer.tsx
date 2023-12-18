@@ -1,13 +1,26 @@
 'use client';
 
 import Link from 'next/link'
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
+import { ref, getDownloadURL } from 'firebase/storage';
+import { store } from 'firebaseConfig';
 import { CMSContext, pageLink } from 'app/CMSProvider';
 import { socialMedia } from 'app/CMSProvider';
 import ClickableText from './ClickableText';
 
 export default function Footer() {
     const { locale, raw, done, layout } = useContext(CMSContext);
+
+    // Loads Image
+    const [brandImg, SetBrandImg] = useState("")
+    useEffect(() => {
+        const fetchImage = async function () {
+            const globalImage = ref(store, "LayoutImages")
+            getDownloadURL(ref(globalImage, layout.BrandImage)).then(url => SetBrandImg(url))
+        }
+
+        if (done) { fetchImage() }
+    }, [done])
 
     return (
         <main>
@@ -18,7 +31,8 @@ export default function Footer() {
                     {/* LOGO COLUMN */}
                     <div className='cursor-default basis-1/3 flex flex-col gap-y-6'>
                         <header className=' font-semibold text-2xl'>{raw.Footer.logo.title}</header>
-                        <div className='font-light'>{raw.Footer.logo.description}</div>
+                        {/* <div className='font-light'>{raw.Footer.logo.description}</div> */}
+                        <div><img src={brandImg} className='h-20 mx-auto' /></div>
                     </div>
 
 
