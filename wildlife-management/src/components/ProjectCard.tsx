@@ -5,7 +5,6 @@ import { store } from "firebaseConfig";
 import { CMSContext } from "app/CMSProvider";
 import DOMPurify from 'isomorphic-dompurify';
 import { ref, getDownloadURL } from "firebase/storage";
-import Image from "next/image"
 
 type Props = { identifier: string };
 export default function ProjectCard(props: Props) {

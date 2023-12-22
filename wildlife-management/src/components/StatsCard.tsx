@@ -21,7 +21,8 @@ export default function StatsCard(props: Props) {
     }, [])
 
     return (
-        <div className='w-28 sm:w-36 flex flex-col drop-shadow-xl place-items-center'>
+        <div className='w-28 sm:w-36 flex flex-col drop-shadow-xl place-items-center
+                        transition-all hover:scale-110'>
 
             <div className='w-full h-28 sm:h-36 border-4 border-slate-700 mb-1 bg-no-repeat bg-cover bg-center bg-top'
                 style={{ backgroundImage: 'url(' + img + ')' }}
